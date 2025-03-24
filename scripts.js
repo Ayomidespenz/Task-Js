@@ -5,6 +5,7 @@ const taskList = document.getElementById('taskList');
 
 addTaskButton.addEventListener('click', addTask);
 
+
 function addTask() {
     const taskText = taskInput.value.trim();
 const dateInput = document.getElementById('dateInput').value;
@@ -21,11 +22,13 @@ const dateInput = document.getElementById('dateInput').value;
         taskInput.value = '';
 
     }
+    alert("Please enter your task to proceed")
 }
 
 function removeTask(button) {
     const li = button.parentElement;
     taskList.removeChild(li);
+    confirm("Are you sure you want to remove it")
 }
 
 function toggleComplete(event) {
